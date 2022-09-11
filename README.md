@@ -1,1 +1,1 @@
-# test-project-figures
+![My Image](ScriptResult.png)
