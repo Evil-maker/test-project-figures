@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Figures.Interfaces;
 namespace Figures.Tests
 {
     public class TriangleTests
     {
         [Fact]
-        public void CanExistsOneZeroParam()
+        public void CanExists_OneZeroValue_ReturnsFalse()
         {
             double firstSide = 0;
             double secondSide = 2;
@@ -21,7 +16,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void CanExistsOneNegParam()
+        public void CanExists_OneNegativeValue_ReturnsFalse()
         {
             double firstSide = 1;
             double secondSide = -1;
@@ -33,7 +28,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void CanExistsPosParams()
+        public void CanExists_PositiveValue_ReturnsTrue()
         {
             double firstSide = 2;
             double secondSide = 2;
@@ -45,7 +40,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void CanExistsPosBadParams()
+        public void CanExists_PositiveBadValue_ReturnsFalse()
         {
             double firstSide = 2;
             double secondSide = 5;
@@ -57,7 +52,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void GetTrianglePosArea()
+        public void GetTriangleArea_PositiveValue_Returns_4_15()
         {
             double firstSide = 3;
             double secondSide = 5;
@@ -71,7 +66,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void GetTriangleAreaNegParam()
+        public void GetTriangleArea_NegativeValue_Returns0()
         {
             double firstSide = -1;
             double secondSide = 5;
@@ -85,7 +80,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void GetCircleAreaZeroParam()
+        public void GetTriangleArea_OneZeroValue_Returns0()
         {
             double firstSide = 0;
             double secondSide = 5;
@@ -99,7 +94,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void IsRightTrianglePosParams()
+        public void IsRightTriangle_PositiveValue_ReturnsFalse()
         {
             double firstSide = 3;
             double secondSide = 5;
@@ -113,7 +108,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void IsRightTriangleNegParams()
+        public void IsRightTriangle_OneNegativeValue_ReturnsFalse()
         {
             double firstSide = 3;
             double secondSide = -9;
@@ -127,7 +122,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void IsRightTriangleZeroParams()
+        public void IsRightTriangle_OneZeroValue_ReturnsFalse()
         {
             double firstSide = 3;
             double secondSide = 5;
@@ -141,7 +136,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void IsRightTriangleGoodParams()
+        public void IsRightTriangle_AllGoodValues_ReturnsTrue()
         {
             double firstSide = 3;
             double secondSide = 5;
@@ -155,7 +150,7 @@ namespace Figures.Tests
         }
 
         [Fact]
-        public void IsRightTriangleBadParams()
+        public void IsRightTriangle_BadValues_ReturnsFalse()
         {
             double firstSide = 3;
             double secondSide = 5;

@@ -3,7 +3,7 @@
     public class CircleTests
     {
         [Fact]
-        public void CanExistPos()
+        public void CanExist_PositiveValue_ReturnsTrue()
         {
             double radius = 1.2;
             var circle = new Circle(radius);
@@ -12,7 +12,7 @@
         }
 
         [Fact]
-        public void CanExistNeg()
+        public void CanExist_NegativeValue_ReturnsFalse()
         {
             double radius = -1;
             var circle = new Circle(radius);
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CanExistZero()
+        public void CanExist_ZeroValue_ReturnsFalse()
         {
             double radius = 0;
             var circle = new Circle(radius);
@@ -30,7 +30,7 @@
         }
 
         [Fact]
-        public void GetCirclePosArea()
+        public void GetCircleArea_PositiveValue_Returns1256_64()
         {
             double radius = 20;
             var circle = new Circle(radius);
@@ -41,7 +41,7 @@
         }
 
         [Fact]
-        public void GetCircleAreaNegParam()
+        public void GetCircleArea_NegativeValue_Returns0()
         {
             double radius = -1;
             var circle = new Circle(radius);
@@ -52,7 +52,7 @@
         }
 
         [Fact]
-        public void GetCircleAreaZeroParam()
+        public void GetCircleArea_ZeroValue_Returns0()
         {
             double radius = 0;
             var circle = new Circle(radius);
